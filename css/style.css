@@ -1,0 +1,175 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline-width: 0;
+	font-family: sans-serif;
+}
+.board{
+	position: relative;
+	width: 400px;
+	height: 400px;
+}
+.move{
+	height: 33%;
+	width: 33%;
+	position: relative;
+	float: left;
+}
+.move:before,
+.move:after,
+.piece:before,
+.piece:after{
+	content: '';
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	height: 0;
+	width: 0;
+	transition: all 0.8s ease;
+	transform: translateX(-50%) translateY(-50%);
+}
+.circle:after{
+	height: 60%;
+	width: 60%;
+	border-radius: 50%;
+	border: 7px solid #fe6246;
+}
+.cross:after,
+.cross:before{
+	left: 50%;
+	top: 50%;
+	height: 83%;
+	width: 7px;
+	background: #6ee287;
+	border-radius: 4px;
+}
+.cross:after{
+	transform: translateY(-50%) rotate(45deg);
+}
+.cross:before{
+	transform: translateY(-50%) rotate(-45deg);
+}
+.row1{
+	border-bottom: 2px solid #000000;
+}
+.row3{
+	border-top: 2px solid #000000;
+}
+.col1{
+	border-right: 2px solid #000000;
+}
+.col3{
+	border-left: 2px solid #000000;
+}
+.modal{
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.modal:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #000000;
+	opacity: 0.3;
+}
+.modal>div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+#playerSelection{
+	height: 400px;
+	width: 400px;
+	background: #ffffff;
+	padding: 30px;
+}
+#playerSelection>label{
+	margin-top: 10px;
+}
+#playerSelection>label,
+#playerSelection>h2,
+#choosePlayer>select{
+	display: block;
+}
+#playerSelection>h2{
+	text-align: center;
+}
+#playerSelection input{
+	padding: 4px 7px;
+	border: none;
+	border-radius: 3px;
+	border: 1px solid #d9d6d6;
+}
+#choosePlayer>select#players{
+	border: none;
+	padding: 7px;
+	width: 50%;
+}
+.pieceChoice{
+	position: relative;
+	display: inline-block;
+	margin: 9px auto;
+	text-align: center;
+	display: flex;
+	justify-content: space-evenly;
+}
+.piece{
+	float: left;
+	position: relative;
+	width: 80px;
+	height: 80px;	
+	padding: 4px;
+	border: 1px solid #eee;
+	background: #fff;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+}
+.piece:hover{
+	transform: scale(1.1);
+	border: 2px solid #ddd;
+}
+.createPlayer{
+	color: #3c3c3c;
+	background: #67d6f4 ;
+	padding: 4px 7px;
+	border-radius: 3px;
+}
+#next{
+	display: inline-block;
+	color: #fff;
+	background: #25c004;
+	font-size: 1.3rem;
+	padding: 8px;
+	width: 80px;
+	text-align: center;
+	border-radius: 4px;
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+#welcome{
+	background: #fff;
+	width: 400px;
+	padding: 30px;
+}
+#welcome h1{
+	font-size: 1.6rem;
+	display: block;
+	text-align: center;
+	margin-bottom: 20px;
+}

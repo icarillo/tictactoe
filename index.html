@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tic Tec Toe</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="board">
+		<div class="move row1 col1 empty"></div>
+		<div class="move row1 col2 empty"></div>
+		<div class="move row1 col3 empty"></div>
+		<div class="move row2 col1 empty"></div>
+		<div class="move row2 col2 empty"></div>
+		<div class="move row2 col3 empty"></div>
+		<div class="move row3 col1 empty"></div>
+		<div class="move row3 col2 empty"></div>
+		<div class="move row3 col3 empty"></div>
+	</div>
+	<div class="modal player">
+		<div id="playerSelection">
+			<h3>Player 1</h3>
+			<span id="choosePlayer">
+				<label>Please choose a player or create a new one</label>
+				<select name="nPlayerID" id="players">
+					<option value="0">Choose a player...</option>
+				</select>
+			</span>
+			<label>New player:</label>
+			<input type="text" name="newPlayer" id="newPlayer">
+			<a href="#" class="createPlayer">Create</a>
+			<label>Select your piece:</label>
+			<div class="pieceChoice">
+				<div class="piece circle"></div>
+				<div class="piece cross"></div>
+			</div>
+			<a href="#" id="next">Next</a>
+		</div>
+	</div>
+	<div class="modal">
+		<div id="welcome">	
+			<h1>Welcom to Tic Tac Toe</h1>
+			<h2>How to play?</h2>
+			<ol>
+				<li>Create your player</li>
+				<li>Choose your piece (cross or circle)</li>
+				<li>Use your round to position your pieces strategically and win the game</li>
+			</ol>
+		</div>
+	</div>
+	<script src="js/game.js"></script>
+</body>
+</html>
