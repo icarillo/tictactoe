@@ -9,9 +9,14 @@
 	font-family: sans-serif;
 }
 .board{
-	position: relative;
+	position: absolute;
 	width: 400px;
 	height: 400px;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 .move{
 	height: 33%;
@@ -135,6 +140,7 @@
 	border: 1px solid #eee;
 	background: #fff;
 	border-radius: 5px;
+	cursor: pointer;
 	transition: all 0.3s ease;
 }
 .piece:hover{
@@ -146,6 +152,11 @@
 	background: #67d6f4 ;
 	padding: 4px 7px;
 	border-radius: 3px;
+	transition: all 0.2s ease;
+}
+.createPlayer:hover{
+	color: #000;
+	background: #5ebfd9;
 }
 #next{
 	display: inline-block;
