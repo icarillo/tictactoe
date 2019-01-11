@@ -4,6 +4,7 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	list-style: none;
 	text-decoration: none;
 	outline-width: 0;
 	font-family: sans-serif;
@@ -176,6 +177,7 @@
 #welcome{
 	background: #fff;
 	width: 400px;
+	height: 600px;
 	padding: 30px;
 }
 #welcome h1{
